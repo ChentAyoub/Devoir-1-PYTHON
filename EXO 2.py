@@ -1,9 +1,9 @@
 contacts = []
 print("Welconme to your contact book")
 while True:
-    print("1. Add a contact")
-    print("2. View contacts")
-    print("3. Exit")
+    print("1 Add a contact")
+    print("2 View contacts")
+    print("3 Exit")
 
     Choice = input("Enter your choice: ")
     Choice = int(Choice)
@@ -14,8 +14,8 @@ while True:
         print ("Contact added successfully")
     elif Choice == 2:
         print("Your contacts: ")
-        for contact in contacts:
-            print(contact)
+        for index, contact in enumerate(contacts, start=1):
+            print(f"{index}. {contact}")
     elif Choice == 3:
         print("Exiting the contact book goodbye")
         break
